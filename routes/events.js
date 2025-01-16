@@ -8,12 +8,14 @@ const { check } = require('express-validator')
 
 const { validarCampos } = require('../middlewares/validar-campos')
 const { calcularPaneles } = require('../controllers/events')
+const { validarJWT } = require('../middlewares/validar-jwt')
 
 const router = Router()
 
 router.post(
     '/calcularPaneles',
     [
+        validarJWT,
         check('a','El alto del panel es obligatorio y debe ser un numero entero').not().isEmpty().isInt(),
         check('b','El ancho del panel es obligatorio y debe ser un numero entero').not().isEmpty().isInt(),
         check('y','El alto del techo es obligatorio y debe ser un numero entero').not().isEmpty(),

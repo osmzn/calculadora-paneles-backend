@@ -4,7 +4,7 @@
 
 1. Ejecutar npm install
 2. Renombrar el archivo .env.template por .env
-3. Hacer los cambios respectivos en las variables de entorno en caso de ser necesario
+3. Hacer los cambios respectivos en el archivo .env (rellenar datos de usuario para json web token, este debe ser el mismo en el front y el backend)
 4. Ejecutar npm start
 
 ## Nota Adicional
